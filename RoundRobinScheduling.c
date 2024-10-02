@@ -16,12 +16,12 @@ void main(){
 	scanf("%d",&tq);
 	printf("Process ID\tBurst Time\tTurnaround Time\tWaiting Time\n");
 	for(t = 0,cnt = 0;remain!=0;){
-		if(rt[cnt]<=tq &&rt[cnt]>0){
+		if(rt[cnt]<=tq &&rt[cnt]>0)
 			t+=rt[cnt];
 			rt[cnt]= 0;
 			flag =1;
 		}else if (rt[cnt]>0){
-			rt[cnt]-=tq;
+			rt[cnt]-=tq
 			t+=tq;
 		}
 		if(rt[cnt]==0 &&flag == 1){
